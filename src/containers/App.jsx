@@ -7,7 +7,6 @@ import Summary from './Summary';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
 import ToolboxLink from 'react-toolbox/lib/Link';
-const url = "http://localhost:9090/public/api/entries.json";
 import {
     BrowserRouter as Router,
     Route,
@@ -19,10 +18,6 @@ class App extends React.Component {
 
     constructor() {
         super();
-    }
-
-    componentDidMount() {
-        this.props.fetchEntries(url);
     }
 
     render() {
