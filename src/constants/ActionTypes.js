@@ -1,3 +1,2 @@
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const RENAME = 'RENAME';
+export const FETCHENTRIES = 'FETCHENTRIES';
+export const SETENTRIES = 'SETENTRIES';

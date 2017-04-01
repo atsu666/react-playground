@@ -7,8 +7,18 @@ import Navigation from 'react-toolbox/lib/navigation';
 import Link from 'react-toolbox/lib/Link';
 
 import EntryCard from '../components/EntryCard';
+const url = "http://localhost:9090/webpack-dev-server/public/api/entries.json";
 
 class App extends React.Component {
+
+    constructor(){
+        super();
+    }
+
+    componentDidMount () {
+        this.props.fetchEntries(url);
+    }
+
     render() {
         const props = this.props;
         return (<div>
@@ -20,21 +30,13 @@ class App extends React.Component {
             </AppBar>
             <div className="container" style={{padding:"15px"}}>
                 <div className="row">
-                    <div className="col-md-4">
-                        <div style={{paddingBottom:"15px"}}>
-                            <EntryCard/>
+                    {props.entries.map(item => {
+                        <div className="col-md-4">
+                            <div style={{paddingBottom:"15px"}}>
+                                <EntryCard props={item}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div style={{paddingBottom:"15px"}}>
-                            <EntryCard/>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div style={{paddingBottom:"15px"}}>
-                            <EntryCard/>
-                        </div>
-                    </div>
+                    })}
                 </div>
             </div>
         </div>);

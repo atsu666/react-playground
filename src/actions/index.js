@@ -1,7 +1,5 @@
 import * as types from '../constants/ActionTypes';
 
-export const increment = () => ({ type: types.INCREMENT });
+export const fetchEntries = (url) => ({ type: types.FETCHENTRIES, url: url});
 
-export const decrement = () => ({ type: types.DECREMENT });
-
-export const rename = (name) => ({ type: types.RENAME, name: name });
+export const setEntries = (entries) => ( { type: types.SETENTRIES, entries: entries });

@@ -9,6 +9,7 @@ const dummyText = 'Lorem Ipsum is simply dummy text of the printing and typesett
 
 export default class EntryCard extends React.Component {
     render() {
+        const props = this.props;
         return (
         <Card style={{width: '100%'}}>
             <CardTitle
@@ -18,13 +19,13 @@ export default class EntryCard extends React.Component {
             />
             <CardMedia
                 aspectRatio="wide"
-                image="https://placeimg.com/800/450/nature"
+                image="{props.image}"
             />
             <CardTitle
-                title="Title goes here"
+                title="{props.title}"
                 subtitle="Subtitle here"
             />
-            <CardText>{dummyText}</CardText>
+            <CardText>{props.summary}</CardText>
         </Card>
         )
     }
