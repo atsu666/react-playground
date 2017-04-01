@@ -28,14 +28,14 @@ class App extends React.Component {
                     <AppBar title='React Playground' leftIcon='menu'>
                         <Navigation type='horizontal'>
                             <ToolboxLink><Link to="/public/index.html">Home</Link></ToolboxLink>
-                            <ToolboxLink><Link to="/public/news">News</Link></ToolboxLink>
+                            <ToolboxLink><Link to="/public/news/">News</Link></ToolboxLink>
                             {/*<Link href='http://' active label='Profile' icon='person' />*/}
                         </Navigation>
                     </AppBar>
                     <Route exact path="/public/index.html" render={() => {
                         return (<Summary {...props}/>);
                     }}/>
-                    <Route path="/public/news" render={() => {
+                    <Route path="/public/news/" render={() => {
                         return (<div>hoge</div>);
                     }} />
                 </div>
