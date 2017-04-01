@@ -5,8 +5,9 @@ import * as Actions from '../actions';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
 import Link from 'react-toolbox/lib/Link';
-
 import EntryCard from '../components/EntryCard';
+import Loader from 'halogen/PulseLoader';
+
 const url = "http://localhost:9090/public/api/entries.json";
 
 class App extends React.Component {
@@ -30,14 +31,20 @@ class App extends React.Component {
             </AppBar>
             <div className="container" style={{padding:"15px"}}>
                 <div className="row">
-                    {props.entries.map(item => {
-                        return(
-                            <div className="col-md-4">
-                                <div style={{paddingBottom:"15px"}}>
-                                    <EntryCard {...item}/>
-                                </div>
-                            </div>);
-                    })}
+                    {props.entries.length === 0 ? 
+                    
+                    <Loader color="#26A65B" size="16px" margin="4px"/>
+
+                    :
+                        props.entries.map(item => {
+                            return(
+                                <div className="col-md-4">
+                                    <div style={{paddingBottom:"15px"}}>
+                                        <EntryCard {...item}/>
+                                    </div>
+                                </div>);
+                        })
+                    }
                 </div>
             </div>
         </div>);
