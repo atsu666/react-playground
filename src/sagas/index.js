@@ -12,7 +12,8 @@ function fetchJSON(url) {
                 resolve(JSON.parse(xhr.response));
             } else {
                 reject(new Error(xhr.statusText));
-            } };
+            } 
+        };
         xhr.onerror = () => {
             reject(new Error(xhr.statusText));
         };

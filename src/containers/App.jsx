@@ -31,11 +31,12 @@ class App extends React.Component {
             <div className="container" style={{padding:"15px"}}>
                 <div className="row">
                     {props.entries.map(item => {
-                        <div className="col-md-4">
-                            <div style={{paddingBottom:"15px"}}>
-                                <EntryCard props={item}/>
-                            </div>
-                        </div>
+                        return(
+                            <div className="col-md-4">
+                                <div style={{paddingBottom:"15px"}}>
+                                    <EntryCard {...item}/>
+                                </div>
+                            </div>);
                     })}
                 </div>
             </div>

@@ -19,10 +19,10 @@ export default class EntryCard extends React.Component {
             />
             <CardMedia
                 aspectRatio="wide"
-                image="{props.image}"
+                image={props.image}
             />
             <CardTitle
-                title="{props.title}"
+                title={props.title}
                 subtitle="Subtitle here"
             />
             <CardText>{props.summary}</CardText>
