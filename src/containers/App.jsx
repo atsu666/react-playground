@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Summary from './Summary';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
+import ToolboxLink from 'react-toolbox/lib/Link';
 const url = "http://localhost:9090/public/api/entries.json";
 import {
     BrowserRouter as Router,
@@ -31,8 +32,8 @@ class App extends React.Component {
                 <div>
                     <AppBar title='React Playground' leftIcon='menu'>
                         <Navigation type='horizontal'>
-                            <Link to="/public/index.html">Home</Link>
-                            <Link to="/public/news">News</Link>
+                            <ToolboxLink><Link to="/public/index.html">Home</Link></ToolboxLink>
+                            <ToolboxLink><Link to="/public/news">News</Link></ToolboxLink>
                             {/*<Link href='http://' active label='Profile' icon='person' />*/}
                         </Navigation>
                     </AppBar>
