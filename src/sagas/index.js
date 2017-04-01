@@ -8,7 +8,9 @@ function fetchJSON(url) {
         xhr.open('GET', url, true);
         xhr.onload = () => {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                resolve(JSON.parse(xhr.response));
+                setTimeout(() => {
+                    resolve(JSON.parse(xhr.response));
+                }, 3000);
             } else {
                 reject(new Error(xhr.statusText));
             } 
@@ -22,6 +24,9 @@ function fetchJSON(url) {
 
 function* fetchEntries(action) {
   const entries = yield fetchJSON(action.url);
+    setTimeout(function(){
+
+    }, 1000)
   yield put(setEntries(entries));   
 }
 

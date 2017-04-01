@@ -4,9 +4,9 @@ import React from 'react';
 import * as Actions from '../actions';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
+import MDSpinner from "react-md-spinner";
 import Link from 'react-toolbox/lib/Link';
 import EntryCard from '../components/EntryCard';
-import Loader from 'halogen/PulseLoader';
 
 const url = "http://localhost:9090/public/api/entries.json";
 
@@ -31,19 +31,15 @@ class App extends React.Component {
             </AppBar>
             <div className="container" style={{padding:"15px"}}>
                 <div className="row">
-                    {props.entries.length === 0 ? 
-                    
-                    <Loader color="#26A65B" size="16px" margin="4px"/>
-
-                    :
+                    {props.entries.length > 0 ?
                         props.entries.map(item => {
-                            return(
-                                <div className="col-md-4">
-                                    <div style={{paddingBottom:"15px"}}>
-                                        <EntryCard {...item}/>
-                                    </div>
-                                </div>);
+                            return (<div className="col-md-4">
+                                <div style={{paddingBottom: "15px"}}>
+                                    <EntryCard {...item}/>
+                                </div>
+                            </div>)
                         })
+                        : <MDSpinner />
                     }
                 </div>
             </div>
