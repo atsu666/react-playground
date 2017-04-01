@@ -28,6 +28,17 @@ module.exports = {
                 }
             },
             {
+                test: /\.(css)$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss?sourceMap&sourceComments'
+                ]
+            },
+            {
+                test: /\.(scss)$/,
+                loaders: ['style-loader', 'css-loader?modules', 'sass-loader']
+            },
+            {
                 test: /\.(jpg|png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
                 exclude: /node_modules/,
                 loader: 'url-loader',
@@ -36,6 +47,13 @@ module.exports = {
                 }
             }
         ]
+    },
+    postcss: () => {
+        return [
+            /* eslint-disable global-require */
+            require('postcss-cssnext'),
+            /* eslint-enable global-require */
+        ];
     },
     plugins: [
 
