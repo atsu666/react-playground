@@ -4,25 +4,44 @@ import React from 'react';
 import * as Actions from '../actions';
 import Header from '../components/Header';
 import Summary from './Summary';
-import { Router, Route, NotFoundRoute, DefaultRoute, Link, RouteHandler, hashHistory} from 'react-router';
+import AppBar from 'react-toolbox/lib/app_bar';
+import Navigation from 'react-toolbox/lib/navigation';
 const url = "http://localhost:9090/public/api/entries.json";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
 
 class App extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.props.fetchEntries(url);
     }
 
     render() {
         const props = this.props;
-        return (<div>
-            <Header />
-            <Summary {...props}/>
-        </div>);
+        return (
+            <Router>
+                <div>
+                    <AppBar title='React Playground' leftIcon='menu'>
+                        <Navigation type='horizontal'>
+                            <Link to="/">Home</Link>
+                            <Link to="/news">News</Link>
+                            {/*<Link href='http://' active label='Profile' icon='person' />*/}
+                        </Navigation>
+                    </AppBar>
+                    <Route exact path="/public/index.html" render={() => {
+                        return (<Summary {...props}/>);
+                    }}/>
+                </div>
+            </Router>
+        );
     }
 }
 

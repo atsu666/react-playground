@@ -5,6 +5,7 @@ import EntryCard from '../components/EntryCard';
 export default class Summary extends React.Component {
      render () {
         const props = this.props;
+        console.log('Summary');
         return (
         <div className="container" style={{padding:"15px"}}>
             <div className="row">
