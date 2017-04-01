@@ -10,8 +10,8 @@ const dummyText = 'Lorem Ipsum is simply dummy text of the printing and typesett
 export default class EntryCard extends React.Component {
     render() {
         return (
-        <Card style={{width: '350px'}}>
-            <CardTitle¥
+        <Card style={{width: '100%'}}>
+            <CardTitle
                 avatar="https://placeimg.com/80/80/animals"
                 title="Avatar style title"
                 subtitle="Subtitle here"
@@ -25,10 +25,6 @@ export default class EntryCard extends React.Component {
                 subtitle="Subtitle here"
             />
             <CardText>{dummyText}</CardText>
-            <CardActions theme={theme}>
-                <Button label="Action 1"/>
-                <Button label="Action 2"/>
-            </CardActions>
         </Card>
         )
     }
