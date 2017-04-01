@@ -21,13 +21,19 @@ class App extends React.Component {
             <div className="container" style={{padding:"15px"}}>
                 <div className="row">
                     <div className="col-md-4">
-                        <EntryCard/>
+                        <div style={{paddingBottom:"15px"}}>
+                            <EntryCard/>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <EntryCard/>
+                        <div style={{paddingBottom:"15px"}}>
+                            <EntryCard/>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <EntryCard/>
+                        <div style={{paddingBottom:"15px"}}>
+                            <EntryCard/>
+                        </div>
                     </div>
                 </div>
             </div>
