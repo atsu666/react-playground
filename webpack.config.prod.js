@@ -1,11 +1,8 @@
-/**
- * Created by atsu666 on 2017/04/01.
- */
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.jsx',
+    entry: './src/main.js',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -32,12 +29,34 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(css)$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss?sourceMap&sourceComments'
+                ]
+            },
+            {
+                test: /\.(scss)$/,
                 loaders: ['style-loader', 'css-loader?modules', 'sass-loader']
-            }, {
-                test: /\.(jpg|png)$/,
-                loader: 'url-loader'
+            },
+            {
+                test: /\.(jpg|png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+                exclude: /node_modules/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10240
+                }
             }
         ]
-    }
-}
+    },
+    postcss: () => {
+        return [
+            /* eslint-disable global-require */
+            require('postcss-cssnext'),
+            /* eslint-enable global-require */
+        ];
+    },
+    plugins: [
+
+    ],
+};

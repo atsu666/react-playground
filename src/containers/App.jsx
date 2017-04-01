@@ -31,14 +31,17 @@ class App extends React.Component {
                 <div>
                     <AppBar title='React Playground' leftIcon='menu'>
                         <Navigation type='horizontal'>
-                            <Link to="/">Home</Link>
-                            <Link to="/news">News</Link>
+                            <Link to="/public/index.html">Home</Link>
+                            <Link to="/public/news">News</Link>
                             {/*<Link href='http://' active label='Profile' icon='person' />*/}
                         </Navigation>
                     </AppBar>
                     <Route exact path="/public/index.html" render={() => {
                         return (<Summary {...props}/>);
                     }}/>
+                    <Route path="/public/news" render={() => {
+                        return (<div>hoge</div>);
+                    }} />
                 </div>
             </Router>
         );
