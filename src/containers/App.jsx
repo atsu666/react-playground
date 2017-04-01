@@ -39,7 +39,10 @@ class App extends React.Component {
                                 </div>
                             </div>)
                         })
-                        : <MDSpinner />
+                        : 
+                        <div style={{textAlign:"center"}}>
+                            <MDSpinner />
+                        </div>
                     }
                 </div>
             </div>
