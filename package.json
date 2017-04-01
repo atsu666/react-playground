@@ -26,8 +26,6 @@
     "redux": "^3.6.0",
     "redux-actions": "^1.2.2",
     "redux-saga": "^0.14.4",
-    "superagent": "^3.5.2",
-    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",

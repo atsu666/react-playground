@@ -1,7 +1,6 @@
 import { call, put, takeEvery, select } from 'redux-saga/effects'
 import * as types from '../constants/ActionTypes';
 import { setEntries } from "../actions";
-import agent from "superagent";
 
 function fetchJSON(url) {
     return new Promise((resolve, reject) => {
