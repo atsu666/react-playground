@@ -7,7 +7,7 @@ import Navigation from 'react-toolbox/lib/navigation';
 import Link from 'react-toolbox/lib/Link';
 
 import EntryCard from '../components/EntryCard';
-const url = "http://localhost:9090/webpack-dev-server/public/api/entries.json";
+const url = "http://localhost:9090/public/api/entries.json";
 
 class App extends React.Component {
 

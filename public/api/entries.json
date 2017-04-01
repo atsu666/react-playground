@@ -1,68 +1,70 @@
 [
-{
-title: "Docker で作る a-blog cms ローカル開発環境",
-eid: 204,
-summary: "この記事は Advent Calendar 2016の25日目のエントリーです。 ローカル開発環境を整える場合、MAMPなどのLAMPソフトを使ったり、Vagrantでローカル環境を構築したりだと思いますが、ここ数年だとDockerでローカ...",
-image: "http://atsu666.com/archives/001/201612/b149abc0d4a3f39013d36a06734db19a.png",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-},
-{
-title: "a-blog cms + Varnish 触ってみる",
-eid: 170,
-summary: "これは、 a-blog cms Advent Calendar 2015 の25日目の記事です。 2013年の今日と同じ25日にAdvent Calendar で a-blog cmsをリバースプロキシ（nginx）で高速化 という記事を書いていました。 そこで今回は、Ngi...",
-image: "http://atsu666.com/archives/001/201512/7137049e1a32c7c78ec8cb6410e17722.jpg",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-},
-{
-title: "a-blog cms テンプレート解体新書",
-eid: 143,
-summary: "これは、 a-blog cms Advent Calendar 2015 の6日目の記事です。 大袈裟なタイトルがついていますが、a-blog cmsでのテンプレートを組み立てる、ちょっとしたコツなどを紹介したいとおもいます。 テンプレート要...",
-image: "http://atsu666.com/",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-},
-{
-title: "【a-blog cms】アップロードしたPDFのサムネイルを作成する",
-eid: 90,
-summary: "はじめに a-blog cmsではカスタムフィールドやユニットとしてファイルがアップロード出来るようになっているのですが、 PDFのサムネイルが標準で表示できるようになっていません。 デフォルトでは以下ような画像...",
-image: "http://atsu666.com/archives/001/201502/51df19ca4d9032501b1791d525a997e9.png",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-},
-{
-title: "a-blog cmsで画像のロスレス圧縮をする",
-eid: 88,
-summary: "ロスレス圧縮 画像を最適化（可逆圧縮＝ロスレス圧縮）する事により、データサイズを小さくすることができ、ページスピードが早くなることに役立ちます。 しかし、a-blog cmsでは静的なものは、製作者が適切に圧...",
-image: "http://atsu666.com/archives/001/201501/4059a8704a0a08c719773ede7d044c38.gif",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-},
-{
-title: "Docker + a-blog cms",
-eid: 87,
-summary: "はじめに このエントリーはa-blog cms Advent Calendar 2014の25日目の記事になります。 a-blog cmsの開発環境は人それぞれ色々な環境があると思いますが、a-blog cmsの最初のハードル（最大のハードル？）として...",
-image: "http://atsu666.com/archives/001/201412/31fa8d407ee41f599be2281349b84641.png",
-writer: {
-name: "Atushi Ito",
-email: "ito@appleple.com",
-image: "http://atsu666.com/../themes/system/images/usericon/user1.png"
-}
-}
+  {
+    "title": "Docker で作る a-blog cms ローカル開発環境",
+    "eid": 204,
+    "summary": "この記事は Advent Calendar 2016の25日目のエントリーです。  ローカル開発環境を整える場合、MAMPなどのLAMPソフトを使ったり、Vagrantでローカル環境を構築したりだと思いますが、ここ数年だとDockerでローカ...",
+    "image": "http://atsu666.com/archives/001/201612/b149abc0d4a3f39013d36a06734db19a.png",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+    "title": "a-blog cms + Varnish 触ってみる",
+    "eid": 170,
+    "summary": "これは、 a-blog cms Advent Calendar 2015 の25日目の記事です。 2013年の今日と同じ25日にAdvent Calendar で a-blog cmsをリバースプロキシ（nginx）で高速化 という記事を書いていました。 そこで今回は、Ngi...",
+    "image": "http://atsu666.com/archives/001/201512/7137049e1a32c7c78ec8cb6410e17722.jpg",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+    "title": "a-blog cms テンプレート解体新書",
+    "eid": 143,
+    "summary": "これは、 a-blog cms Advent Calendar 2015 の6日目の記事です。 大袈裟なタイトルがついていますが、a-blog cmsでのテンプレートを組み立てる、ちょっとしたコツなどを紹介したいとおもいます。 テンプレート要...",
+    "image": "http://atsu666.com/",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+    "title": "【下書き】Creative Cloud SDK TEST",
+    "eid": 142,
+    "summary": "",
+    "image": "http://atsu666.com/archives/001/201510/299188ba2b8b2dab9bad359e8edfd70d.jpg",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+    "title": "【a-blog cms】アップロードしたPDFのサムネイルを作成する",
+    "eid": 90,
+    "summary": "はじめに a-blog cmsではカスタムフィールドやユニットとしてファイルがアップロード出来るようになっているのですが、 PDFのサムネイルが標準で表示できるようになっていません。 デフォルトでは以下ような画像...",
+    "image": "http://atsu666.com/archives/001/201502/51df19ca4d9032501b1791d525a997e9.png",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+    "title": "a-blog cmsで画像のロスレス圧縮をする",
+    "eid": 88,
+    "summary": "ロスレス圧縮 画像を最適化（可逆圧縮＝ロスレス圧縮）する事により、データサイズを小さくすることができ、ページスピードが早くなることに役立ちます。 しかし、a-blog cmsでは静的なものは、製作者が適切に圧...",
+    "image": "http://atsu666.com/archives/001/201501/4059a8704a0a08c719773ede7d044c38.gif",
+    "writer": {
+      "name": "Atushi Ito",
+      "email": "ito@appleple.com",
+      "image": "http://atsu666.com/../themes/system/images/usericon/user1.png"
+    }
+  },
+  {
+  }
 ]
