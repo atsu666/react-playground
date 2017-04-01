@@ -2,12 +2,9 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import React from 'react';
 import * as Actions from '../actions';
-import AppBar from 'react-toolbox/lib/app_bar';
-import Navigation from 'react-toolbox/lib/navigation';
-import MDSpinner from "react-md-spinner";
-import Link from 'react-toolbox/lib/Link';
-import EntryCard from '../components/EntryCard';
-
+import Header from '../components/Header';
+import Summary from './Summary';
+import { Router, Route, NotFoundRoute, DefaultRoute, Link, RouteHandler, hashHistory} from 'react-router';
 const url = "http://localhost:9090/public/api/entries.json";
 
 class App extends React.Component {
@@ -23,29 +20,8 @@ class App extends React.Component {
     render() {
         const props = this.props;
         return (<div>
-            <AppBar title='React Playground' leftIcon='menu'>
-                <Navigation type='horizontal'>
-                    <Link href='http://' label='Inbox' icon='inbox' />
-                    <Link href='http://' active label='Profile' icon='person' />
-                </Navigation>
-            </AppBar>
-            <div className="container" style={{padding:"15px"}}>
-                <div className="row">
-                    {props.entries.length > 0 ?
-                        props.entries.map(item => {
-                            return (<div className="col-md-4">
-                                <div style={{paddingBottom: "15px"}}>
-                                    <EntryCard {...item}/>
-                                </div>
-                            </div>)
-                        })
-                        : 
-                        <div style={{textAlign:"center"}}>
-                            <MDSpinner />
-                        </div>
-                    }
-                </div>
-            </div>
+            <Header />
+            <Summary {...props}/>
         </div>);
     }
 }
