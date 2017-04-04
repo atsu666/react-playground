@@ -2,10 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: {
+        'bundle': './src/main.js',
+        'graphiql': './src/graphiql.js'
+    },
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']

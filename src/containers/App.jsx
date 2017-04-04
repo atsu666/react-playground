@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import React from 'react';
 import * as Actions from '../actions';
-import Header from '../components/Header';
 import Summary from './Summary';
 import AppBar from 'react-toolbox/lib/app_bar';
 import Navigation from 'react-toolbox/lib/navigation';
@@ -15,11 +14,6 @@ import {
 
 
 class App extends React.Component {
-
-    constructor() {
-        super();
-    }
-
     render() {
         const props = this.props;
         return (
